@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 @import "tailwindcss";
 @layer base;
 
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
 /* .figtree-<uniquifier> {
     font-family: "Figtree", sans-serif;
@@ -25,4 +25,19 @@
 
 body{
     background-color: var(--Yellow);
+    @apply flex flex-col justify-center items-center h-screen w-full;
+}
+
+main{
+    width: min(95%,450px);
+    
+    @apply bg-white p-5 border-1 border-solid rounded-2xl
+}
+
+.image{
+    @apply w-full mb-4 rounded-2xl
+}
+
+.info{
+    @apply flex flex-col gap-3
 }
