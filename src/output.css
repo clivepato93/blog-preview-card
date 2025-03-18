@@ -9,6 +9,12 @@
       "Courier New", monospace;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
+    --font-weight-bold: 700;
+    --radius-lg: 0.5rem;
     --radius-2xl: 1rem;
     --default-font-family: var(--font-sans);
     --default-font-feature-settings: var(--font-sans--font-feature-settings);
@@ -190,13 +196,11 @@
   --Yellow: hsl(47, 88%, 63%);
   --White: hsl(0, 0%, 100%);
 }
-.figtree-uniquifier {
+body {
+  background-color: var(--Yellow);
   font-family: "Figtree", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-}
-body {
-  background-color: var(--Yellow);
   display: flex;
   height: 100vh;
   width: 100%;
@@ -220,9 +224,46 @@ main {
   border-radius: var(--radius-2xl);
 }
 .info {
+  margin-block: calc(var(--spacing) * 6);
   display: flex;
   flex-direction: column;
   gap: calc(var(--spacing) * 3);
+}
+h1 {
+  background-color: var(--Yellow);
+  width: fit-content;
+  border-radius: var(--radius-lg);
+  padding-inline: calc(var(--spacing) * 3);
+  padding-block: calc(var(--spacing) * 1);
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+}
+h3 {
+  font-size: var(--text-xl);
+  line-height: var(--tw-leading, var(--text-xl--line-height));
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+}
+h3 ~ p {
+  color: var(--Gray-500);
+}
+@media (width>400px) {
+  h2 ~ h3 {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  h3 ~ p {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+}
+.author {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing) * 5);
+}
+.author > img {
+  width: 40px;
 }
 @property --tw-rotate-x {
   syntax: "*";
@@ -258,4 +299,8 @@ main {
   syntax: "*";
   inherits: false;
   initial-value: solid;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
 }
