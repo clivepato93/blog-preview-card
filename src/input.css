@@ -62,11 +62,15 @@ h3 ~ p {
     color: var(--Gray-500);
 }
 
-@media (width>400px){
-
+@media (width > 410px){
     h2 ~ h3{
         @apply text-3xl
     }
+}
+
+@media (width>400px){
+
+
     h3 ~ p {
         @apply text-xl
     }
