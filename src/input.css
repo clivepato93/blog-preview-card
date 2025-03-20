@@ -33,8 +33,8 @@ body{
 
 main{
     width: min(95%,450px);
-    
-    @apply bg-white p-5 border-1 border-solid rounded-2xl
+    box-shadow: 10px 10px 0px;
+    @apply bg-white p-5 border-1 border-solid rounded-2xl mb-5;
 }
 
 .image{
@@ -46,17 +46,19 @@ main{
 }
 
 h1{
-    
     background-color: var(--Yellow);
     @apply w-fit py-1 px-3 font-bold rounded-lg
-    
-
 }
 
 
-h3{
-    @apply font-bold text-xl
+.html{
+    @apply font-bold text-3xl mr-auto;    
 }
+
+.html:active{
+    color: var(--Yellow);
+}
+
 
 h3 ~ p {
     color: var(--Gray-500);
